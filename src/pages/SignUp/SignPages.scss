@@ -1,0 +1,39 @@
+.sign__page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign__left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C9AC8C;
+}
+.page__img{
+    width: 500px;
+    height: 500px;
+}
+.sign__right{
+    width: 50vw;
+    height: 100vh;
+    padding-left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.page__title{
+    font-family: 'Arial Black';
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 10px;
+    color: #000000;
+}
+
+.sign__controller{
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,69 @@
+
+.security_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.profile_name{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #212121;
+
+}
+
+.profile__controller{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #464E5F;
+}
+.page__input{
+    width: 100%;
+    background: #f3F6F9;
+    border-radius: 4px;
+}
+.numbr_email{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+.line_input{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.security_line{
+    width: 100%;
+    height: 1px;
+    margin-left: 0;
+    margin-bottom: 40px;
+    color: rgba(236, 240, 243, 1);
+    
+}
+.page__btn{
+    width: 142px;
+    font-family: 'Poppins';
+    font-style: normal;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    margin-left: auto;
+    
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
