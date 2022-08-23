@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Image = ({src}) => {
+export const Image = ({src, className}) => {
   return (
-    <img className='page__img' src={src} alt="" />
+    <img className={`page__img ${className}`} src={src} alt="" />
   )
 }

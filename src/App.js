@@ -5,16 +5,19 @@ import { MyProfile } from "./pages/MyProfile/MyProfile";
 import { Security } from "./pages/Security/Security";
 import { Settings } from "./pages/Settings/Settings";
 import { Container } from "./components/container/Container";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="App">
       <Container>
-      <Signup/>
-      <SignIn/>
-      <MyProfile  />
-      <Security/>
-      <Settings/>
+        
+        <Home/>
+        <Signup/>
+        <SignIn/>
+        <MyProfile/>
+        <Security/>
+        <Settings/>
       </Container>
     </div>
   );
