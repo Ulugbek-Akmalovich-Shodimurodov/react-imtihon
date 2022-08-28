@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Card } from '../../Components/Card/Card';
 import { Container } from '../../Components/container/Container';
 import { ScrolItemList } from '../../Components/ScrolItemList/ScrolItemList';
@@ -10,7 +10,6 @@ import { Image } from '../../Components/Image/Image';
 
 export const OuthorSingle = () => {
 
-    const {id} = useParams();
 
     const [data, setData] = useState([]);
 

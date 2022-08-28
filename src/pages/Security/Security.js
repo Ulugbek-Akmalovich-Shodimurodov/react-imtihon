@@ -1,6 +1,5 @@
 import "./Security.scss"
 import React from 'react'
-import { Input } from "../../Components/Input/Input"
 import { Helper } from "../../Components/Helper/Helper"
 import { Button } from "../../Components/Btn/Button"
 
