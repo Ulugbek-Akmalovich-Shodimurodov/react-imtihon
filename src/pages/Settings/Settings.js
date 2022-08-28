@@ -1,10 +1,10 @@
-import { Switch } from '@mui/material'
-import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils'
+// import { Switch } from '@mui/material'
+// import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils'
 import React from 'react'
-import { Button } from '../../components/Btn/Button'
-import { Helper } from '../../components/Helper/Helper'
+import { Button } from '../../Components/Btn/Button'
+import { Helper } from '../../Components/Helper/Helper'
 import "./Setttings.scss"
-import { Container } from '../../components/container/Container'
+import { Container } from '../../Components/container/Container'
 
 export const Settings = () => {
   return (
@@ -24,7 +24,7 @@ export const Settings = () => {
         <div className="theme">
         <span>Theme</span>
         <div className=''>
-        <Switch className='settings_switch' {...isLabelWithInternallyDisabledControl} defaultChecked={false} />
+        {/* <Switch className='settings_switch' {...isLabelWithInternallyDisabledControl} defaultChecked={false} /> */}
         </div>
         </div> 
         <hr className='settings_line'/>

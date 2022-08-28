@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
-import "./assets/scss/main.scss"
-import { AuthProvider } from './context/AuthContext/AuthContext';
+import './assets/styles/index.css';
+import { AuthProvider } from './Context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <AuthProvider>
+	<BrowserRouter>
+		<AuthProvider>
 			<App />
 		</AuthProvider>
-  </Router>
+	</BrowserRouter>,
 );

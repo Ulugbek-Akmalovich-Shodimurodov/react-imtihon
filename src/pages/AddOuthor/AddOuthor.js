@@ -1,8 +1,8 @@
 // import React, { useContext } from 'react'
-import { Image } from '../../components/Image/Image'
+import { Image } from '../../Components/Image/Image'
 import OuthorImg from "../../assets/img/author_img.png"
-import { Button } from '../../components/Btn/Button'
-import { Container } from '../../components/container/Container'
+import { Button } from '../../Components/Btn/Button'
+import { Container } from '../../Components/container/Container'
 import axios from 'axios'
 import FormData from 'form-data'
 import "./AddOuthor.scss"

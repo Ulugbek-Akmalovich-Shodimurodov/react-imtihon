@@ -1,9 +1,9 @@
 import React from 'react'
 import "./AddBook.scss"
-import { Button } from '../../components/Btn/Button'
-import { Image } from "../../components/Image/Image"
+import { Button } from '../../Components/Btn/Button'
+import { Image } from "../../Components/Image/Image"
 import BookImg  from "../../assets/img/book_img.png"
-import { Container } from '../../components/container/Container'
+import { Container } from '../../Components/container/Container'
 
 export const AddBook = () => {
 
@@ -30,11 +30,16 @@ export const AddBook = () => {
 
           <input className="controller__item settings-page__input"  type='text' placeholder='Price' />
 
-          <input className="controller__item settings-page__input" type='text' placeholder='Country' />
+          <select className='settings-page__input controller__item page__input' name="country" id="">
+          <option className='select_option_item' value="1">Temuriylar davri </option>
+          <option className='select_option_item' value="2">Jadid adabiyoti </option>
+          <option className='select_option_item' value="3">Sovet davri </option>
+          <option className='select_option_item' value="4">Mustaqillik davri</option>
+        </select>
 
           <input className="controller__item settings-page__input"  type='text' placeholder='Author' />
 
-          <textarea name="message" rows="5" cols="10" className="add-book_page__input" HtmlId='Price' type='' placeholder='Price' />
+          <textarea name="message" rows="5" cols="10" className="add-book_page__input" HtmlId='Price' type='' placeholder='Book Data' />
 
           <Button className="add-btn">Create</Button>
         </form>

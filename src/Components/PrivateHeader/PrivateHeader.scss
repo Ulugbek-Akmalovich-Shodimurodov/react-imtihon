@@ -1,5 +1,6 @@
-.header{
+.privateheader{
     z-index: 1000;
+    width: 100% !important;
     height: 60px !important;
     position: sticky;
     top: 0;
@@ -72,7 +73,7 @@
 }
 .dropdown-menu{
     padding-left: 20px;
-    margin-left: -110px !important;
+    margin-left: 20px !important;
     margin-top: 10px !important;
     background: 		#001933;
     list-style: none;

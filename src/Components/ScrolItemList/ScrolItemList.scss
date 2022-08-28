@@ -1,0 +1,15 @@
+.items-wrapper{
+    width: 90%;
+    margin: 5px;
+    padding: 0;
+    display: flex ;
+    overflow-x: auto;
+    list-style: none;
+}
+
+.items-wrapper li {
+    min-width: 110px;
+    // line-height: 110px;
+    text-align: center;
+    margin-right: 0px;
+}

@@ -1,27 +1,19 @@
-import { Card } from '../../components/Card/Card'
-import React, { useEffect, useState } from 'react'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../../../node_modules/bootstrap/dist/js/bootstrap"
-import { Carusel } from '../../components/Carusel/Carusel'
-import { Categories } from '../../components/Categories/Categories'
-import { Search } from '../../components/Search/Search'
+import { Carusel } from '../../Components/Carusel/Carusel'
+import { Search } from '../../Components/Search/Search'
 import "./Books.scss"
-import { Container } from '../../components/container/Container'
-import axios from 'axios'
+import "../../Components/Categories/Categories.scss"
+import { Container } from '../../Components/container/Container'
+import { Route, Routes, NavLink } from 'react-router-dom'
+import { BookTemuriylar } from '../BookTemuriylar/BookTemuriylar'
+import { BookJadidlar } from "../BookJadidlar/BookJadidlar"
+import { BookSovet } from "../BookSovet/BookSovet"
+import { BookMustaqillik } from '../BookMustaqillik/BookMustaqillik'
 
 export const Books = () => {
 
-  const [data, setData] = useState([]);
 
-  useEffect(()=> {
-    axios.get('https://book-service-layer.herokuapp.com/book/genreId/3')
-    .then( function (response){
-      setData(response.data);
-    }).catch(function (error){
-      console.log(error);
-    })
-    
-  }, []);
 
   return (
     <Container>
@@ -29,10 +21,36 @@ export const Books = () => {
       <Carusel/>
     <Search/>
 <h3 className='books_page_text'>Asosiy kategoriyalar</h3>
-    <Categories/>
-    <div className='card-list'>
-    {data.map((e) => <Card key={e.id} data={e} />) }
-    </div>
+<ul className='categories-list d-flex   justify-content-around p-2 bg-secondary nav_list'>
+        <li>
+            <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" }  to="temuriylar">
+            Temuriylar davri 
+            </NavLink>
+        </li>
+        <li>
+            <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" } to="jadid">
+            Jadid adabiyoti 
+            </NavLink>
+        </li>
+        <li>
+            <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" } to="sovet">
+            Sovet davri 
+            </NavLink>
+        </li>
+        <li>
+            <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" } to="mustaqillik">
+            Mustaqillik davri
+            </NavLink>
+        </li>
+    </ul>
+    
+<Routes>
+    <Route index element={<BookTemuriylar/>}/>
+    <Route path='/temuriylar' element={<BookTemuriylar/>}/>
+    <Route path='/jadid' element={<BookJadidlar/>}/>
+    <Route path='/sovet' element={<BookSovet/>}/>
+    <Route path='/mustaqillik' element={<BookMustaqillik/>}/>
+</Routes>
 </div>
 </Container>
   )

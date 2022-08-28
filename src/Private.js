@@ -1,24 +1,39 @@
-import { Routes, Route} from "react-router-dom";
-import { Home } from "./pages/Home/Home";
-import { Header } from "./components/Header/Header"
+import React from 'react'
+import { Routes, Route} from "react-router-dom"
+import { PrivateHeader } from './Components/PrivateHeader/PrivateHeader'
+import { Home } from './pages/Home/Home'
 import { Books } from "./pages/Books/Books"
-import {AddOuthor } from "./pages/AddOuthor/AddOuthor"
-import {AddBook } from "./pages/AddBook/AddBook"
-// import { SignIn } from "./pages/SignIn/SignIn";
-import { Public } from "./Public";
-// import { Settings } from "./pages/Settings/Settings";
-import { MyProfile } from "./pages/MyProfile/MyProfile";
-import { Temuriylar } from "./pages/Temuriylar/Temuriylar";
+import { MyProfile } from "./pages/MyProfile/MyProfile"
+import { AddBook } from "./pages/AddBook/AddBook"
+import { AddOuthor } from "./pages/AddOuthor/AddOuthor"
+import { Login } from './pages/Login/Login'
+import { OuthorSingle } from './pages/OuthorSingle/OuthorSingle'
+import { BookSinglePage } from "./pages/BookSinglePage/BookSinglePage"
 
-export const Private = () =>{
-    return (
-        <Routes>
-      <Route path='/' element={
+export const Private = () => {
+  return (
+
+    <Routes>
+      <Route index element={
         <>
-          <Header/>
+          <PrivateHeader/>
           <Home/>
         </>} />
+        <Route path='/home/*' element={<>
+          <PrivateHeader/>
+          <Home/>
+        </>}/> 
+        <Route path='/books/*' element={<>
+          <PrivateHeader/>
+          <Books/>
+        </>}/> 
+        <Route path='/my-profile/*' element={<MyProfile/>}/>
+        <Route path='/add-outhor/*' element={<AddOuthor/>}/>
+        <Route path='/add-book/*' element={<AddBook/>}/>
+        <Route path='/signin/*' element={<Login/>}/>
+        <Route path='/single/:id' element={<OuthorSingle/>}/>
+        <Route path='/book-single/:title' element={<BookSinglePage/>}/>
       
     </Routes>
-    )
+  )
 }

@@ -1,8 +1,8 @@
 import "./Security.scss"
 import React from 'react'
-import { Input } from "../../components/Input/Input"
-import { Helper } from "../../components/Helper/Helper"
-import { Button } from "../../components/Btn/Button"
+import { Input } from "../../Components/Input/Input"
+import { Helper } from "../../Components/Helper/Helper"
+import { Button } from "../../Components/Btn/Button"
 
 export const Security = () => {
   return (
@@ -12,23 +12,23 @@ export const Security = () => {
             <form className='profile__controller' >
 
                 <label className='label' htmlFor="email">Email</label>
-                <Input className="page__input" HtmlId='email' type='text' placeholder='Email' />
+                <input className="controller__item page__input" HtmlId='email' type='text' placeholder='Email' />
                 <Helper>Please enter your email address.</Helper>
 
                 <label className='label' htmlFor="password">Current password</label>
-                <Input className="page__input" HtmlId='password' type='password' placeholder='Password' />
+                <input className="controller__item page__input" HtmlId='password' type='password' placeholder='Password' />
                 <Helper>Please enter your password.</Helper>
 
                 <div className='numbr_email'>
                     <div className='line_input'>
                         <label className='label' htmlFor="new_password1">Phone</label>
-                        <Input className="page__input" HtmlId='new_password1' type='password' placeholder='New password' />
+                        <input className="controller__item page__input" HtmlId='new_password1' type='password' placeholder='New password' />
                         <Helper>Please enter your new password.</Helper>
                     </div>
 
                     <div className='line_input'>
                         <label className='label' htmlFor="new_password2">Email</label>
-                        <Input className="page__input" HtmlId='new_password2' type='password' placeholder='New password' />
+                        <input className="controller__item page__input" HtmlId='new_password2' type='password' placeholder='New password' />
                         <Helper>Please enter your new password.</Helper>
                     </div>
                 </div>

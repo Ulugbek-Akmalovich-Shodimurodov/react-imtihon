@@ -1,15 +1,16 @@
-import "./assets/scss/main.scss"
-import { useAuth } from "./Hooks/useAuth";
-import { Private } from "./Private";
-import { Public } from "./Public";
+import { useAuth } from './hooks/useAuth';
+import { Public } from './Public';
+import { Private } from './Private';
+import "./assets/styles/main.scss"
+import "./assets/styles/general.scss"
 
 function App() {
 	const [token] = useAuth();
 	console.log(token);
 	if (token) {
-    return <Private />;
+		return <Public />;
 	}
-  return <Public />;
+	return <Private />;
 }
 
 export default App;
