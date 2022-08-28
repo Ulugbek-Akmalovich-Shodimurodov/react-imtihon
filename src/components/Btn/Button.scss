@@ -1,8 +1,11 @@
 .submit_btn{
     height: 46px;
     width: 328px;
-    border-radius: 99px;
-    background: #152540;
-    color: #FFFFFF;
-
+    border-radius: 99px !important;
+    background: #152540 !important;
+    color: #FFFFFF !important;
+    -webkit-border-radius: 99px !important;
+    -moz-border-radius: 99px !important;
+    -ms-border-radius: 99px !important;
+    -o-border-radius: 99px !important;
 }

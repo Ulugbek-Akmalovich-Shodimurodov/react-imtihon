@@ -1,28 +1,40 @@
 import React from 'react'
-import { Link } from 'react-router-link'
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../../../node_modules/bootstrap/dist/js/bootstrap"
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Image } from '../Image/Image'
 import UserImg from "../../assets/img/user_icon.png"
 import "./Header.scss"
 import Logo from "../../assets/img/logo.png"
+import { Container } from '../container/Container'
 
 export const Header = () => {
+
+
+    const publicnavigate = useNavigate();
+    const handleLinkClick = ()=>{
+        publicnavigate('/public')
+
+    }
+
   return (
-    <>
-        <ul className=' d-flex justify-content-around p-2 bg-secondary nav_list '>
+    <Container className='header'>
+        <header>
+        <ul className=' nav-nav_list d-flex position-sticky  top-0 w-100 justify-content-around p-2 bg-secondary nav_list '>
         <li className=''>
-            <Link className='link' to="/home">
+            <Link to="/home"  >
                 <Image className="logo" src={Logo} />
             </Link>
         </li>
         <li className='list__item'>
-            <Link className='link' to="/home">
+            <NavLink className={({isActive}) => isActive ? "isActive link" : "link"} to="/home"  >
                 Home
-            </Link>
+            </NavLink>
         </li>
         <li className='list__item'>
-            <Link className='link' to="/books">
+            <NavLink className={({isActive}) => isActive ? "isActive" : "link"} to="/books" >
                 Books
-            </Link>
+            </NavLink>
         </li>
         <li className=''>
         <div class="btn-group">
@@ -33,15 +45,17 @@ export const Header = () => {
                 <span className="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul className="dropdown-menu">
-                <li><Link className="drop-down__link">Add Author</Link></li>
-                <li><Link className="drop-down__link">Add Books</Link></li>
+                <li className="drop-down__link"><Link to='/my-profile' >My Pprofile</Link></li>
+                <li className="drop-down__link"><Link to='/add-outhor' >Add Author</Link></li>
+                <li className="drop-down__link"><Link to='/add-book' >Add Books</Link></li>
                 <hr className='drop-down__line' />
-                <li><Link className="drop-down__link">Long Out</Link></li>
+                <li onClick={handleLinkClick} className="drop-down__link"><Link to='/public'   >Long Out</Link></li>
             </ul>
         </div>
         </li>
     </ul>
     <hr className='header_line' />
-    </>
+    </header>
+    </Container>
   )
 }
