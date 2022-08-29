@@ -4,8 +4,10 @@ import React from 'react'
 import "./carusel.scss"
 import { Image } from '../Image/Image'
 import CaruselImg from "../../assets/img/Carusel_img.png"
+import { useTranslation } from 'react-i18next';
 
 export const Carusel = () => {
+    const {t} = useTranslation();
   return (
     <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
     <div className="carousel-indicators carusel__line">
@@ -17,19 +19,19 @@ export const Carusel = () => {
         <div className="carousel-item active" data-bs-interval="10000">
         <Image src={CaruselImg} className="d-block w-100  h-50" alt=""/>
         <div className="carousel-caption d-none d-md-block">
-            <h2 className='direction__title'>Temuriylar davri adabiyoti</h2>
+            <h2 className='direction__title'>{t("temuriylar")}</h2>
         </div>
         </div>
         <div className="carousel-item" data-bs-interval="5000">
         <Image src={CaruselImg} className="d-block w-100 h-50" alt=""/>
         <div className="carousel-caption d-none d-md-block">
-            <h5 className='direction__title'>Sovet davri adabiyoti</h5>
+            <h5 className='direction__title'>{t("sovet_davri_ad")}</h5>
         </div>
         </div>
         <div className="carousel-item">
         <Image src={CaruselImg} className="d-block w-100 h-50" alt=""/>
         <div className="carousel-caption d-none d-md-block">
-            <h5 className='direction__title'>Mustaqillik davri adabiyoti</h5>
+            <h5 className='direction__title'>{t("mustaqillik_davri_ad")}</h5>
         </div>
         </div>
     </div>

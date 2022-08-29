@@ -10,8 +10,11 @@ import { BookTemuriylar } from '../BookTemuriylar/BookTemuriylar'
 import { BookJadidlar } from "../BookJadidlar/BookJadidlar"
 import { BookSovet } from "../BookSovet/BookSovet"
 import { BookMustaqillik } from '../BookMustaqillik/BookMustaqillik'
+import { useTranslation } from 'react-i18next';
 
 export const Books = () => {
+
+    const {t} = useTranslation();
 
 
 
@@ -20,26 +23,26 @@ export const Books = () => {
       <div className='books__page'>
       <Carusel/>
     <Search/>
-<h3 className='books_page_text'>Asosiy kategoriyalar</h3>
+<h3 className='books_page_text'>{t("bulimlar")}</h3>
 <ul className='categories-list d-flex   justify-content-around p-2 bg-secondary nav_list'>
         <li>
             <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" }  to="temuriylar">
-            Temuriylar davri 
+            {t("temuriylar_davri")}
             </NavLink>
         </li>
         <li>
             <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" } to="jadid">
-            Jadid adabiyoti 
+            {t("jadid_adabiyoti")} 
             </NavLink>
         </li>
         <li>
             <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" } to="sovet">
-            Sovet davri 
+            {t("sovet_davri")} 
             </NavLink>
         </li>
         <li>
             <NavLink className={({isActive}) => isActive ? "isActive categories_link" : "categories_link" } to="mustaqillik">
-            Mustaqillik davri
+            {t("mustaqillik_davri")}
             </NavLink>
         </li>
     </ul>

@@ -7,10 +7,11 @@ import UserImg from "../../assets/img/user_icon.png"
 import "./PrivateHeader.scss"
 import Logo from "../../assets/img/logo.png"
 import { Container } from '../container/Container'
+import { useTranslation } from 'react-i18next';
 
 export const PrivateHeader = () => {
 
-
+    const {t} = useTranslation();
 
 
   return (
@@ -24,12 +25,12 @@ export const PrivateHeader = () => {
         </li>
         <li className='list__item'>
             <NavLink className={({isActive}) => isActive ? "isActive link" : "link"} to="/home"  >
-                Home
+                {t("bosh")}
             </NavLink>
         </li>
         <li className='list__item'>
             <NavLink className={({isActive}) => isActive ? "isActive" : "link"} to="/books" >
-                Books
+                {t("kitoblar")}
             </NavLink>
         </li>
         <li className=''>
@@ -41,11 +42,11 @@ export const PrivateHeader = () => {
                 <span className="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul className=" dropdown-menu">
-                <li className="drop-down__link"><Link to='/my-profile' >My Pprofile</Link></li>
-                <li className="drop-down__link"><Link to='/add-outhor' >Add Author</Link></li>
-                <li className="drop-down__link"><Link to='/add-book' >Add Books</Link></li>
+                <li className="drop-down__link"><Link to='/my-profile' >{t("mening_prof")}</Link></li>
+                <li className="drop-down__link"><Link to='/add-outhor' >{t("muallif_q")}</Link></li>
+                <li className="drop-down__link"><Link to='/add-book' >{t("kitob_qushish")}</Link></li>
                 <hr className='drop-down__line' />
-                <li className="drop-down__link"><Link to='/signin'   >Long Out</Link></li>
+                <li className="drop-down__link"><Link to='/signin'   >{t("chiqish")}</Link></li>
             </ul>
         </div>
         </li>

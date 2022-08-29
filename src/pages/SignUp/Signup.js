@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import './signup.scss';
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 
 
 export const SignUp = () => {
+	const {t} = useTranslation();
 	const navigate = useNavigate();
   const firstName = useRef();
   const lastName = useRef();
@@ -39,11 +41,11 @@ export const SignUp = () => {
 		<div className='signup'>
 			<div className='container'>
 				<div className='signup__inner'>
-					<h2 className='signup__title'>Sign up</h2>
+					<h2 className='signup__title'>{t("ruyxatdan_utish")}</h2>
 					<p className='signup__desc'>
-						Already have an account?{' '}
+						{t("account")}{' '}
 						<Link className='signup__link' to='/signin'>
-							Sign in
+							{t("kirish")}
 						</Link>
 					</p>
 					<form onSubmit={handleSubmit}>
@@ -53,7 +55,7 @@ export const SignUp = () => {
 						<input ref={email} type='email' className='input' placeholder='Email' />
 						<input ref={password} type='password' className='input' placeholder='Password' />
 						<button className='signup__btn' type='submit'>
-							Next step
+							{t("keyingi")}
 						</button>
 					</form>
 				</div>

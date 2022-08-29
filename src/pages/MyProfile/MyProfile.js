@@ -5,8 +5,10 @@ import "./MyProfile.scss"
 import {MyAccount} from "../MyAccount/MyAccount"
 import {Security} from "../Security/Security"
 import {Settings} from "../Settings/Settings"
+import { useTranslation } from 'react-i18next';
 
 export const MyProfile = () => {
+    const {t} = useTranslation();
   return (
     <Container>
     <nav className='my-profile__nav'>
@@ -14,19 +16,19 @@ export const MyProfile = () => {
             <li>
                 <NavLink className={({isActive}) => isActive ? "isActiveCategories my-profile__link" : "my-profile__link" } to='my-account'>
                     <span>1</span>
-                My Account
+                {t("mening_accountim")}
                 </NavLink>
             </li>
             <li>
                 <NavLink className={({isActive}) => isActive ? "isActiveCategories my-profile__link" : "my-profile__link" } to='security'>
                     <span>2</span>
-                Security
+                {t("maxfiy")}
                 </NavLink>
             </li>
             <li>
                 <NavLink className={({isActive}) => isActive ? "isActiveCategories my-profile__link" : "my-profile__link" } to='make-payment'>
                     <span>3</span>
-                Make Payment
+                {t("sozlamalar")}
                 </NavLink>
             </li>
         </ul>

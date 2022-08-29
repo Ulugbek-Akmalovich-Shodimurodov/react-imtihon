@@ -8,8 +8,10 @@ import "./BookSinglePage.scss"
 import { Image } from '../../Components/Image/Image';
 import BookImg from "../../assets/img/book_img.png"
 import Tirnoq from "../../assets/img/qushtirnoq.png"
+import { useTranslation } from 'react-i18next';
 
 export const BookSinglePage = () => {
+  const {t} = useTranslation();
 
     const [data, setData] = useState([]);
 
@@ -35,11 +37,11 @@ export const BookSinglePage = () => {
             <div className='book-page__date'>
                 <h2 className='book-title'>Book Title</h2>
                 <p className='book__outhor'>Javlon Javliyev</p>
-                <p>Sahifalar soni: <span>376</span></p>
-                <p>Chop etilgan : <span>376</span></p>
-                <p>Janri: <span>Tarixiy</span></p>
-                <p>Nashriyot: <span>Nihol nashr</span></p>
-                <p className='line-text'>To'liq ma'lumot <hr className='book-line'/></p>
+                <p>{t("varaqlar")}: <span>376</span></p>
+                <p>{t("ch_yili")} : <span>376</span></p>
+                <p>{t("janri")}: <span>Tarixiy</span></p>
+                <p>{t("nashriyot")}: <span>Nihol nashr</span></p>
+                <p className='line-text'>{t("k_malumot")} <hr className='book-line'/></p>
                 <p className='outhor-bio'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam itaque quia eveniet, reprehenderit perferendis magni magnam velit sapiente ad repudiandae, debitis ut, molestias quasi omnis! Neque deleniti dolore, sapiente, magnam recusandae corporis modi consequatur sunt, nisi illo rem itaque obcaecati accusantium labore veniam reprehenderit. Ratione esse nam nesciunt, eum incidunt deserunt voluptatem temporibus eos? Eligendi veritatis minus labore voluptates enim quos, ipsam repudiandaenesciunt nihil. Quidem quam sapiente consequatur impedit repellendus!</p>
             </div>
             </div>

@@ -3,8 +3,10 @@ import './login.scss';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { useAuth } from '../../hooks/useAuth';
+import { useTranslation } from 'react-i18next';
 
 export const Login = () => {
+	const {t} = useTranslation();
 	const elEmail = useRef();
 	const elPassword = useRef();
   const { setToken} = useAuth()
@@ -27,28 +29,28 @@ export const Login = () => {
 		<div className='login'>
 			<div className='container'>
 				<div className='login__inner'>
-					<h2 className='login__title'>Sign in</h2>
+					<h2 className='login__title'>{t("kirish")}</h2>
 					<p className='login__desc'>
-						Do not you have an account?{' '}
+						{t("no_account")}{' '}
 						<Link className='login__link' to='/signup'>
-							Sign up
+							{t("ruyxatdan_utish")}
 						</Link>
 					</p>
 					<form onSubmit={handleSubmit}>
 						<input
 							ref={elEmail}
-							placeholder='Email'
+							placeholder={t("email")}
 							type='email'
 							className='input'
 						/>
 						<input
 							ref={elPassword}
-							placeholder='Password'
+							placeholder={t("parol")}
 							type='password'
 							className='input'
 						/>
 						<button className='signup__btn' type='submit'>
-							Next step
+							{t("keyingi")}
 						</button>
 					</form>
 				</div>
